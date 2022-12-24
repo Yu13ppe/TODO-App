@@ -1,30 +1,24 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import {useEffect, useState} from 'react'
 
 function useLocalStorage(itemName, initialValue) {
     const [loading, setLoading ] = useState(true)
     const [error, setError ] = useState(false)
     const [item, setItem] = useState(initialValue)
-  
+    const [taskName, setTaskName] = useState(null)
+
+    const localStorageItem = localStorage.getItem(itemName);
+    
     useEffect(() => {
-      setTimeout(()=>{
-      try {
-        const localStorageItem = localStorage.getItem(itemName);
-        let parsedItem;
-  
-        if (!localStorageItem) {
-          localStorage.setItem(itemName, JSON.stringify(initialValue));
-          parsedItem = initialValue;
-        } else {
-          parsedItem = JSON.parse(localStorageItem)
-        }
-  
-        setItem(parsedItem);
-        setLoading(false);
-      } catch (error) {
-        setError(error)
+      if (!localStorageItem) {
+        setTaskName(itemName)
+        localStorageItem.setItem(taskName, JSON.stringify(item));
+      } else {
+        setItem(JSON.parse(localStorageItem))
       }
-    });
-    }, [1000])
+
+      setLoading(false);
+    }, [setItem, setTaskName])
   
     const saveItem = (newItem) => {
       try {
