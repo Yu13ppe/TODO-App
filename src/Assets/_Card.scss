@@ -1,0 +1,47 @@
+$bg-img: url('./Images/JP-bg.svg');
+
+body{
+    background-image: $bg-img;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-width: 380px;
+
+    .Card{
+        width: 90%;
+        margin: 0 auto;
+        border-radius: 3px;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+        background-color: #fff;
+        padding: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        max-height: 80%;
+        overflow-y: auto;
+    }
+}
+
+@media screen and (min-width: 800px){
+    body{
+        background-image: $bg-img;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        min-width: 380px;
+
+        .Card{
+            width: 50%;
+            margin: 0 auto;
+            border-radius: 3px;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+            background-color: #fff;
+            padding: 1rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            max-height: 80%;
+            overflow-y: auto;
+        }
+    }
+}

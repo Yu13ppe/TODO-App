@@ -1,0 +1,42 @@
+.createButton{
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: #ddd;
+    border: none;
+    color: #333;
+    font-size: 35px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 1.3em;
+    right: 1.3em;
+    cursor: pointer;
+    transition: 0.3s;
+    outline: #258;
+
+    &:hover{
+        background: #888;
+    }
+}
+
+@media screen and (min-width: 800px){
+    .createButton{
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: #ddd;
+        border: none;
+        color: #333;
+        font-size: 50px;
+        font-weight: bold;
+        position: absolute;
+        bottom: 1.3em;
+        right: 1.3em;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover{
+            background: #888;
+        }
+    }
+}

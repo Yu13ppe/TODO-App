@@ -1,0 +1,23 @@
+.todoSearch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    input {
+        padding: 10px;
+        font-size: 20px;
+        border: 1px solid #48a;
+        border-radius: 5px;
+        outline: none;
+        margin: 2em;
+        width: calc(100% - 4em);
+
+        &:focus {
+            border: 1px solid #333;
+        }
+
+        &::placeholder {
+            color: #999;
+        }
+    }
+}

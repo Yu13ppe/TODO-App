@@ -1,0 +1,97 @@
+.Modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+ 
+    .TodoForm{
+        width: 90%;
+        max-width: 25em;
+        background-color: #fff;
+        padding: 2em 2.5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+
+        .Label{
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #252525;
+            margin-bottom: 1.5em;
+        }
+        
+        textarea{
+            background-color: #f5f5f5;
+            border: 1px solid #202329;
+            border-radius: 3px;
+            box-shadow: 0 5 50px rgba(32, 35, 41, 0.25);
+            color: #1e1e1f;
+            font-size: 1.4em;
+            text-align: center;
+            padding: 0.7em;
+            height: 96px;
+            width: calc(100% - 25px);
+            resize: none;
+
+            &:focus{
+                outline: none;
+            }
+            
+            &::placeholder{
+                color: #a5a5a5;
+                font-size: .8em;
+            }
+        }
+
+        .TodoForm-buttonContainer{
+            margin-top: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+
+            .TodoForm-button{
+                cursor: pointer;
+                display: inline-block;
+                font-size: 1.3em;
+                color: #202329;
+                font-weight: 400;
+                width: 7.5em;
+                height: 3em;
+                border-radius: 3px;
+                border: none;
+            }
+        
+            .TodoForm-button--cancel{
+                background-color: transparent;
+                color: #151515;
+    
+                &:hover{
+                    background-color: #aaa;
+                    transition: all 0.3s ease-in-out;
+                }
+            }
+    
+            .TodoForm-button--add{
+                background-color: #75dfea;
+                color: #222;
+                box-shadow: 0 5 25px rgba(97, 218, 250, 0.5);
+    
+                &:hover{
+                    background-color: #25afba;
+                    transition: all 0.3s ease-in-out;
+                }
+            }
+        }
+    }
+}
