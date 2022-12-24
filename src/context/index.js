@@ -1,5 +1,5 @@
 import React, {createContext, useState} from 'react'
-import {useLocalStorage} from './useLocalStorage'
+import {useLocalStorage} from '../hooks/useLocalStorage'
 
 const TodoContext = createContext();
 
@@ -13,7 +13,7 @@ function TodoProvider(props){
     const [searchValue, setSearchValue] = useState('')
     const [openModal, setOpenModal] = useState(false)
   
-    const completedTodos = todos.filter(todo => !!todo.isCompleted).length
+    const completedTodos = todos.filter(todo => Boolean(todo.isCompleted)).length
     const totalTodos = todos.length
   
     let searchedTodos = [];
